@@ -1,0 +1,60 @@
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumitem}                       % custom enum labels
+\usepackage{parskip}                        % add vertical paragraph space
+\usepackage{tocloft}						% modify toc position
+\usepackage{xr}								% cross-references
+\usepackage{mathtools}						% Aboxed
+\usepackage{empheq}							% box multiple lines
+\usepackage{upgreek}
+\usepackage{chemformula}
+\usepackage{esint}							% oiint
+\usepackage{cancel}
+\usepackage[framemethod=TikZ]{mdframed}     % graphics and framed envs
+\usepackage[hang,flushmargin]{footmisc}		% remove footnote indentation
+\usepackage[hyperfootnotes=false,
+					hidelinks]{hyperref}	% create clickable table of contents
+
+
+
+\newenvironment{theorem}[1][]{
+	\refstepcounter{theo}
+	\mdftheo{Theorem}{#1}{red!25}
+	\begin{mdframed}[]\relax
+}{\end{mdframed}}
+
+\newenvironment{lemma}[1][]{
+	\refstepcounter{theo}
+	\mdftheo{Lemma}{#1}{red!15}
+	\begin{mdframed}[]\relax
+}{\end{mdframed}}
+
+\newenvironment{corollary}[1][]{
+	\refstepcounter{theo}
+	\mdftheo{Corollary}{#1}{red!15}
+	\begin{mdframed}[]\relax
+}{\end{mdframed}}
+
+\newenvironment{definition}[1][]{
+	\mdfnontheo{Definition}{#1}{blue!20}
+	\begin{mdframed}[]\relax
+}{\end{mdframed}}
+
+\newenvironment{proof}[1][]{
+	\mdfproof{black!15}
+	\begin{mdframed}[]\relax
+\textit{Proof. }}{\qed \end{mdframed}}
+
+\newenvironment{example}[1][]{
+	\mdfnontheo{Example}{#1}{yellow!40}
+	\begin{mdframed}[]\relax
+}{\end{mdframed}}
+
+\newenvironment{summary}[1][]{
+	\mdfnontheo{Summary}{#1}{green!70!black!30}
+	\begin{mdframed}[]\relax
+}{\end{mdframed}}
+% endregion
